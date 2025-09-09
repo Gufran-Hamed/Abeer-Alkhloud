@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بوابة الدفع</title>
+  <link rel="icon" href="../../assets/imgs/logo3.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="assets/style/style.css">
+  <!--Animation-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@200..1000&display=swap"
+    rel="stylesheet">
+
+  <!--Font awseam-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gradient-to-r from-black via-gray-900 to-[#1a1a1a]">
+  <!--Start nav area -->
+  <nav id="navbar" class="w-full flex items-center p-6 justify-between fixed top-0 z-30">
+    <ul class="hidden md:flex gap-8 text-xl absolute left-1/2 transform -translate-x-1/2">
+      <li><a href="../../assets/pages/payment.html"
+          class=" text-[#FFD700]"
+          style="font-family: 'Cairo', sans-serif">بوابة الدفع</a></li>
+      <li><a href="../../index.html"
+          class=" text-[#FFD700]"
+          style="font-family: 'Cairo', sans-serif">دليل العطور الذكي</a></li>
+      <li><a href="../../assets/pages/allperfoum.html"
+          class=" text-[#FFD700]"
+          style="font-family: 'Cairo', sans-serif">العطور</a></li>
+      <li><a href="../../assets/pages/perfourm.html"
+          class=" text-[#FFD700]"
+          style="font-family: 'Cairo', sans-serif">الرئيسية</a></li>
+    </ul>
+
+    <div
+      class="text-3xl text-[#FFD700] transition transform hover:scale-105 hover:text-white duration-200 cursor-pointer  mr-4  md:ml-auto md:mr-0 mx-auto text-center md:text-left"
+      style="font-family:'Aref Ruqaa', serif">
+      عبير الخلود
+    </div>
+    <div class="md:hidden cursor-pointer ml-auto flex flex-col gap-1" id="menu-btn">
+      <span class="block w-8 h-1 bg-white rounded"></span>
+      <span class="block w-8 h-1 bg-white rounded"></span>
+      <span class="block w-8 h-1 bg-white rounded"></span>
+    </div>
+  </nav>
+  </div><!--End nav area-->
+
+  <!-- Sidebar -->
+  <div id="sidebar"
+    class="fixed top-0 right-0 h-full w-64 bg-black/50 text-white transform translate-x-full transition-transform duration-300 z-30 flex flex-col items-center p-6 gap-6 ">
+    <button id="close-sidebar" class="self-end text-2xl text-white">&times;</button>
+    <a href="../../index.html" class="w-full text-center px-4 py-2 nav-link"
+      style="font-family: 'Cairo', sans-serif">الرئيسية</a>
+    <a href="../../assets/pages/payment.html" class="w-full text-center px-4 py-2 nav-link"
+      style="font-family: 'Cairo', sans-serif">بوابة الدفع</a>
+    <a href="../../assets/pages/allperfoum.html"
+      class="w-full text-center px-4 py-2 nav-link"
+      style="font-family: 'Cairo', sans-serif">العطور</a>
+    <a href="../../index.html" class="w-full text-center px-4 py-2 nav-link "
+      style="font-family: 'Cairo', sans-serif">دليل العطور الذكي</a>
+  </div>
+
+  <!--Start order form-->
+  <div class="flex flex-col md:flex-row w-full max-w-6xl  overflow-hidden mt-24 mx-auto gap-6" id="mainContainer">
+    <div
+      class="w-full md:w-1/2 p-8 rounded-lg flex flex-col gap-6 text-gray-200 bg-black/30 backdrop-blur-md shadow-xl">
+
+      <h2 class="text-xl text-[#FFD700] mb-4 text-center" style="font-family: 'Cairo', sans-serif">ملخص الطلب</h2>
+      <div id="order-summary" class="flex flex-col gap-4" dir="rtl">
+      </div>
+      <div id="subtotal" class="mt-4 border-t border-gray-700 pt-4 flex flex-col gap-2 text-right" dir="rtl">
+        <div class="flex justify-between" style="font-family: 'Cairo', sans-serif">
+          <span>المجموع الفرعي :</span>
+          <span>1000 ج.م</span>
+        </div>
+        <div id="shipping" class="flex justify-between" style="font-family: 'Cairo', sans-serif">
+          <span>الشحن :</span>
+          <span>50 ج.م</span>
+        </div>
+        <div id="total" class="flex justify-between font-bold text-lg" style="font-family: 'Cairo', sans-serif">
+          <span>المجموع الكلي :</span>
+          <span>1050 ج.م</span>
+        </div>
+      </div>
+
+      <!-- payment Option  -->
+      <div class="mt-4 text-right">
+        <h3 class=" text-lg text-white mb-4" style="font-family: 'Cairo', sans-serif;">
+          طريقة الدفع
+        </h3>
+
+        <div class="flex flex-col gap-3 text-white items-end">
+          <label
+            class="flex flex-row-reverse items-center gap-3 p-3 border border-yellow-500 rounded cursor-pointer  mb-2">
+            <input type="radio" name="payment" value="cash" class="accent-yellow-500">
+            <span style="font-family: 'Cairo', sans-serif;">الدفع كاش عند الاستلام</span>
+          </label>
+          <label class="flex flex-row-reverse items-center gap-3 p-3 border border-yellow-500 rounded cursor-pointer ">
+            <input type="radio" name="payment" value="visa" class="accent-yellow-500">
+            <span style="font-family: 'Cairo', sans-serif;">الدفع بالفيزا / البطاقة البنكية</span>
+          </label>
+        </div>
+      </div>
+      <div class="flex gap-4 mt-4">
+  <button id="confirmBtn" type="button"
+    class="flex-1 bg-gradient-to-r from-[#FFC700] to-[#FFD700] text-gray-600 py-2 rounded text-lg cursor-pointer"
+    style="font-family: 'Cairo', sans-serif">
+    تأكيد الطلب
+  </button>
+  <a href="../../assets/pages/allperfoum.html" class="flex-1">
+    <button type="button"
+      class="w-full bg-gray-700 text-white py-2 rounded text-lg cursor-pointer hover:bg-gray-600 transition"
+      style="font-family: 'Cairo', sans-serif">
+      العودة للعطور
+    </button>
+  </a>
+  </div>
+</div><!--End order form area-->
+
+
+    <!-- Start Form Payment  -->
+    <div class="w-full md:w-1/2 p-8 relative  rounded-lg order-first md:order-last">
+      <h2 class="text-xl  mb-6 text-right text-[#FFD700]" style="font-family: 'Cairo', sans-serif">تفاصيل الدفع
+      </h2>
+      <form id="paymentForm" class="space-y-8 text-right max-w-xl mx-auto" dir="rtl">
+
+        <!-- name -->
+        <div class="relative">
+          <span class="block mb-2 text-md text-gray-200">الاسم بالكامل*</span>
+          <input type="text" id="fullname" class="w-full p-2 border rounded text-right text-sm text-gray-200 pr-10"
+            placeholder="أدخل اسمك الكامل">
+        </div>
+
+        <!-- Email  -->
+        <div class="relative">
+          <span class="block mb-2 text-md text-gray-200">البريد الإلكتروني*</span>
+          <input type="email" id="email" class="w-full p-2 border rounded text-right text-sm text-gray-200 pr-10"
+            placeholder="example@mail.com">
+          <span id="emailValid" class="absolute left-3 top-10 text-green-500 hidden"></span>
+          <small id="emailError" class="text-red-500 hidden"></small>
+        </div>
+
+        <!-- Phone number  -->
+        <div class="relative">
+          <span class="block mb-2 text-md text-gray-200">رقم الهاتف*</span>
+          <input type="tel" id="phone" class="w-full p-2 border rounded text-right text-sm text-gray-200 pr-10"
+            placeholder="01012345678">
+          <span id="phoneValid" class="absolute left-3 top-10 text-green-500 hidden"></span>
+          <small id="phoneError" class="text-red-500 hidden"></small>
+        </div>
+
+        <div class="relative">
+          <!-- Address  -->
+          <span class="block mb-2 text-md text-gray-200">العنوان*</span>
+          <!--Street -->
+          <input type="text" id="street" class="w-full p-2 border rounded text-right text-sm text-gray-200 pr-10 mb-3"
+            placeholder="أدخل اسم الشارع والمنطقة">
+          <input type="number" id="houseNumber" class="w-full p-2 border rounded text-right text-sm text-gray-200 pr-10"
+            placeholder="أدخل رقم العماره">
+        </div>
+
+        <!-- payment card  -->
+        <div class="relative">
+          <span class="block mb-2 text-md text-gray-200">رقم البطاقة*</span>
+          <input type="text" id="card" maxlength="19"
+            class="w-full p-2 border rounded text-right text-sm text-gray-200 pr-10" placeholder="xxxx xxxx xxxx xxxx">
+          <span id="cardValid" class="absolute left-3 top-10 text-green-500 hidden"></span>
+          <small id="cardError" class="text-red-500 hidden"></small>
+        </div>
+      </form>
+    </div>
+  </div><!--End form area-->
+ <div id="successModal"
+  class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div
+    class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 text-gray-800 rounded-lg shadow-lg max-w-md w-full p-6 text-center relative overflow-hidden">
+    <p class="text-lg font-bold" style="font-family: 'Cairo', sans-serif;">
+      تم تأكيد طلبك بنجاح! استعد لمغامرة عطرية لا مثيل لها
+    </p>
+    <button id="closeModal"
+      class="mt-6 bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition"
+      style="font-family: 'Cairo', sans-serif;">
+      إغلاق
+    </button>
+    <div
+      class="absolute top-0 left-0 w-full h-full bg-white opacity-20 rotate-12 transform -translate-x-1/4 -translate-y-1/4 pointer-events-none">
+    </div>
+  </div>
+</div>
+
+  <!--Start footer style-->
+  <footer class="relative w-full text-white flex flex-col justify-between mt-20">
+    <div class="flex flex-col items-center justify-center mb-8 mt-8 space-y-3">
+      <div class="h-0.5 w-2/3 bg-gradient-to-r from-transparent via-yellow-300 to-transparent rounded-full"></div>
+    </div>
+    <div
+      class="relative z-10 grid grid-cols-1 md:grid-cols-3 justify-items-center items-center flex-grow gap-6 px-6 text-center py-10">
+
+      <!--Contact us   -->
+      <div>
+        <h2 class="text-2xl text-[#FFD700] mb-4" style="font-family:'Aref Ruqaa', serif">تواصل معنا</h2>
+        <p class="mb-2" style="font-family: 'Cairo', sans-serif"> القاهرة، شارع مصطفى النحاس  <i
+              class="fa-solid fa-location-dot"></i></p>
+        <p class="mb-2" style="font-family: 'Cairo', sans-serif"> +201141775522 <i
+              class="fa-solid fa-phone-volume"></i> </p>
+        <p class="mb-2" style="font-family: 'Cairo', sans-serif">Abeeralkhloud@gmail.com <i
+              class="fa-solid fa-envelope"></i> </p>
+      </div>
+
+      <!--Quick Links-->
+      <div>
+        <h2 class="text-2xl  text-[#FFD700] mb-4" style="font-family:'Aref Ruqaa', serif">روابط سريعة</h2>
+        <ul>
+          <li class="mb-2 text-gray-200 footer-links"><a href="../../assets/pages/perfourm.html"
+              style="font-family: 'Cairo', sans-serif">الرئيسية</a></li>
+          <li class="mb-2 text-gray-200 footer-links"><a href="../../assets/pages/allperfoum.html"
+              style="font-family: 'Cairo', sans-serif">العطور</a></li>
+          <li class="mb-2 text-gray-200 footer-links"><a href="../../index.html"
+              style="font-family: 'Cairo', sans-serif">دليل العطور الذكي</a></li>
+          <li class="mb-2 text-gray-200 footer-links"><a href="../../assets/pages/payment.html"
+              style="font-family: 'Cairo', sans-serif">بوابة الدفع</a></li>
+        </ul>
+      </div>
+
+      <!-- Social media  -->
+      <div>
+        <h2 class="text-2xl text-[#FFD700] mb-4" style="font-family:'Aref Ruqaa', serif">تابعنا</h2>
+        <div class="flex justify-center gap-4 text-2xl">
+          <a href="#" class="text-gray-200 transition transform hover:scale-105"><i
+              class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="text-gray-200 transition transform hover:scale-105"><i
+              class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="text-gray-200 transition transform hover:scale-105"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="text-gray-200 transition transform hover:scale-105"><i
+              class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <!--copy right   -->
+    <div class="relative z-10 w-full text-center py-4 text-[#FFD700] text-xl flex flex-col items-center space-y-2" style="font-family:'Aref Ruqaa', serif">
+  <div>© 2025 جميع الحقوق محفوظة عبير الخلود</div>
+  <div class="text-sm text-gray-200">Made by Gufran</div>
+</div>
+  </footer><!--End footer area-->
+  <!--Script-->
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الرئيسية</title>
+  <link rel="icon" href="../../assets/imgs/logo3.png" type="image/png">
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!--Style-->
+  <link rel="stylesheet" href="../../assets/style/style.css">
+
+  <!-- Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    crossorigin="anonymous" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@200..1000&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body class=" bg-gradient-to-r from-black via-gray-900 to-[#1a1a1a]">
+  <div class="relative w-full h-[90vh]">
+
+    <!-- Background video -->
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover -z-10">
+      <source src="../../assets/imgs/video1.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو
+    </video>
+
+    <!-- Start navbar  -->
+    <nav id="navbar" class=" w-full flex items-center p-6 justify-between fixed top-0 z-30">
+
+      <ul class="hidden md:flex gap-8 text-xl absolute left-1/2 transform -translate-x-1/2">
+        <li><a href="../../assets/pages/payment.html" class=" duration-200 text-[#FFD700] "
+            style="font-family: 'Cairo', sans-serif">بوابة الدفع</a></li>
+        <li><a href="../../index.html" class=" text-[#FFD700] " style="font-family: 'Cairo', sans-serif">دليل العطور
+            الذكي</a></li>
+        <li><a href="../../assets/pages/allperfoum.html" class="text-[#FFD700] "
+            style="font-family: 'Cairo', sans-serif">العطور</a></li>
+        <li><a href="../../assets/pages/perfourm.html" class="text-[#FFD700] "
+            style="font-family: 'Cairo', sans-serif">الرئيسية</a></li>
+      </ul>
+
+      <div
+        class="text-3xl text-[#FFD700] transition transform hover:scale-105 hover:text-white duration-200 cursor-pointer  mr-4  md:ml-auto md:mr-0 mx-auto text-center md:text-left"
+        style="font-family:'Aref Ruqaa', serif">
+        عبير الخلود
+      </div>
+
+      <!--Hamburger button-->
+      <div class="md:hidden cursor-pointer ml-auto flex flex-col gap-1" id="menu-btn">
+        <span class="block w-8 h-1 bg-white rounded"></span>
+        <span class="block w-8 h-1 bg-white rounded"></span>
+        <span class="block w-8 h-1 bg-white rounded"></span>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- Sidebar -->
+  <div id="sidebar"
+    class=" fixed top-0 right-0 h-full w-64 bg-black/50 text-white transform translate-x-full transition-transform duration-300 z-30 flex flex-col items-center p-6 gap-6 ">
+    <button id="close-sidebar" class="self-end text-2xl text-white">&times;</button>
+    <a href="../../assets/pages/perfourm.html" class="w-full text-center px-4 py-2 nav-link "
+      style="font-family: 'Cairo', sans-serif">الرئيسية</a>
+    <a href="../../assets/pages/payment.html" class="w-full text-center px-4 py-2 nav-link"
+      style="font-family: 'Cairo', sans-serif ">بوابة الدفع</a>
+    <a href="../../assets/pages/allperfoum.html" class="w-full text-center px-4 py-2 nav-link"
+      style="font-family: 'Cairo', sans-serif">العطور</a>
+    <a href="../../index.html" class="w-full text-center px-4 py-2 nav-link"
+      style="font-family: 'Cairo', sans-serif">دليل العطور الذكي</a>
+  </div>
+
+
+
+
+  <!--day Perfume  -->
+  <div id="day-products" class="hidden w-full px-2 sm:px-0 mt-12">
+    <h2 class="text-2xl text-gray-200 text-center mb-2" style="font-family: 'Cairo', sans-serif">
+      اختياراتنا لك
+    </h2>
+    <div class="flex flex-col items-center justify-center mb-12 mt-2 space-y-3">
+      <div class="h-0.5 w-2/3 bg-gradient-to-r from-transparent via-yellow-300 to-transparent rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-3 sm:grid-cols-3 gap-4 justify-items-center">
+      <div class="perfume-card w-28 sm:w-40 text-center overflow-hidden ">
+        <img src="../../assets/imgs/for-men3.jpg" alt="عطر نهار 1" class="w-full h-28 sm:h-40 object-cover rounded-xl">
+        <div class="p-2">
+          <h3 class="text-[#FFD700] text-sm sm:text-lg mt-1 sm:mt-2" style="font-family: 'Cairo', sans-serif">عطر زارا
+            اكستريم</h3>
+        </div>
+      </div>
+
+      <div class="perfume-card w-28 sm:w-40 text-center overflow-hidden ">
+        <img src="../../assets/imgs/img9.jpg" alt="عطر نهار 2" class="w-full h-28 sm:h-40 object-cover rounded-xl">
+        <div class="p-2">
+          <h3 class="text-[#FFD700] text-sm sm:text-lg mt-1 sm:mt-2" style="font-family: 'Cairo', sans-serif">عطر ميس
+            ديور</h3>
+        </div>
+      </div>
+
+      <div class="perfume-card w-28 sm:w-40 text-center overflow-hidden ">
+        <img src="../../assets/imgs/img7.jpg" alt="عطر نهار 3" class="w-full h-28 sm:h-40 object-cover rounded-xl">
+        <div class="p-2">
+          <h3 class="text-[#FFD700] text-sm sm:text-lg mt-1 sm:mt-2" style="font-family: 'Cairo', sans-serif">عطر هاني
+            مون</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--night Perfume -->
+  <div id="night-products" class="hidden w-full px-2 sm:px-0 mt-12 ">
+    <h2 class="text-2xl text-gray-200 text-center mb-2" style="font-family: 'Cairo', sans-serif">
+      اختياراتنا لك
+    </h2>
+    <div class="flex flex-col items-center justify-center mb-12 mt-2 space-y-3">
+      <div class="h-0.5 w-2/3 bg-gradient-to-r from-transparent via-yellow-300 to-transparent rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-3 sm:grid-cols-3 gap-4 justify-items-center">
+      <div class="perfume-card w-28 sm:w-40 text-center overflow-hidden ">
+        <img src="../../assets/imgs/photo2.jpg" alt="عطر ليل 1" class="w-full h-28 sm:h-40 object-cover rounded-xl">
+        <div class="p-2">
+          <h3 class="text-[#FFD700] text-sm sm:text-lg mt-1 sm:mt-2" style="font-family: 'Cairo', sans-serif">عطر زارا
+            اكستريم</h3>
+        </div>
+      </div>
+      <div class="perfume-card w-28 sm:w-40 text-center overflow-hidden">
+        <img src="../../assets/imgs/new-perfume2.jpg" alt="عطر ليل 2"
+          class="w-full h-28 sm:h-40 object-cover rounded-xl">
+        <div class="p-2">
+          <h3 class="text-[#FFD700] text-sm sm:text-lg mt-1 sm:mt-2" style="font-family: 'Cairo', sans-serif">عطر ميس
+            ديور</h3>
+        </div>
+      </div>
+      <div class="perfume-card w-28 sm:w-40 text-center overflow-hidden ">
+        <img src="../../assets/imgs/photo3.jpg" alt="عطر ليل 3" class="w-full h-28 sm:h-40 object-cover rounded-xl">
+        <div class="p-2">
+          <h3 class="text-[#FFD700] text-sm sm:text-lg mt-1 sm:mt-2" style="font-family: 'Cairo', sans-serif">عطر هاني
+            مون</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Special Perfume -->
+  <div id="special-products" class="hidden w-full px-2 sm:px-0 mt-12 ">
+    <h2 class="text-2xl text-gray-200 text-center mb-2" style="font-family: 'Cairo', sans-serif">
+      اختياراتنا لك
+    </h2>
+    <div class="flex flex-col items-center justify-center mb-12 mt-2 space-y-3">
+      <div class="h-0.5 w-2/3 bg-gradient-to-r from-transparent via-yellow-300 to-transparent rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-3 sm:grid-cols-3 gap-4 justify-items-center ">
+
+      <div class="perfume-card w-28 sm:w-40 text-center overflow-hidden ">
+        <img src="../../assets/imgs/collection3.jpg" alt="عطر مناسبه  1"
+          class="w-full h-28 sm:h-40 object-cover rounded-xl">
+        <div class="p-2">
+          <h3 class="text-[#FFD700] text-sm sm:text-lg mt-1 sm:mt-2" style="font-family: 'Cairo', sans-serif">عطر مارلوڤ
+          </h3>
+        </div>
+      </div>
+
+      <div class="perfume-card w-28 sm:w-40 text-center overflow-hidden ">
+        <img src="../../assets/imgs/new-perifume1.jpg" alt="عطر مناسبه 2"
+          class="w-full h-28 sm:h-40 object-cover rounded-xl">
+        <div class="p-2">
+          <h3 class="text-[#FFD700] text-sm sm:text-lg mt-1 sm:mt-2" style="font-family: 'Cairo', sans-serif">عطر بلو
+            شانيل</h3>
+        </div>
+      </div>
+
+      <div class="perfume-card w-28 sm:w-40 text-center overflow-hidden">
+        <img src="../../assets/imgs/img10.jpg" alt="عطر مناسبه  3" class="w-full h-28 sm:h-40 object-cover rounded-xl">
+        <div class="p-2">
+          <h3 class="text-[#FFD700] text-sm sm:text-lg mt-1 sm:mt-2" style="font-family: 'Cairo', sans-serif">عطر شانيل
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--Start best seller area-->
+  <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <h2 class="text-2xl text-[#FFD700] text-center mb-2" style="font-family: 'Cairo', sans-serif">
+      الأكثر مبيعًا
+    </h2>
+    <div class="flex flex-col items-center justify-center mb-8 mt-2 space-y-3">
+      <div class="h-0.5 w-2/3 bg-gradient-to-r from-transparent via-yellow-300 to-transparent "></div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+      <div class="rounded-2xl overflow-hidden cursor-pointer group relative">
+        <img src="../../assets/imgs/for-men3.jpg" alt="عطر 1" class="w-full h-52 object-cover rounded-2xl">
+        <a href="../../assets/pages/allperfoum.html"
+          class="absolute top-2 left-2 bg-black text-gray-200 py-1.5 px-4 text-sm md:text-base rounded-lg shadow-[0_0_10px_#FFD700] add-to-cart animate__animated animate__pulse custom-duration">
+          تسوق الآن
+        </a>
+        <div class="p-2 text-center">
+          <h3 class="text-lg text-gray-200" style="font-family: 'Cairo', sans-serif">عطر زارا اكستريم</h3>
+          <div class="flex justify-center mt-1 text-yellow-400 space-x-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden cursor-pointer group relative">
+        <img src="../../assets/imgs/collection3.jpg" alt="عطر 2" class="w-full h-52 object-cover rounded-2xl">
+        <a href="../../assets/pages/allperfoum.html"
+          class="absolute top-2 left-2 bg-black text-gray-200 py-1.5 px-4 text-sm md:text-base rounded-lg shadow-[0_0_10px_#FFD700] add-to-cart animate__animated animate__pulse custom-duration">
+          تسوق الآن
+        </a>
+        <div class="p-2 text-center">
+          <h3 class="text-lg text-gray-200" style="font-family: 'Cairo', sans-serif">عطر مارلوڤ</h3>
+          <div class="flex justify-center mt-1 text-yellow-400 space-x-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden cursor-pointer group relative">
+        <img src="../../assets/imgs/img9.jpg" alt="عطر 3" class="w-full h-52 object-cover rounded-2xl">
+        <a href="../../assets/pages/allperfoum.html"
+          class="absolute top-2 left-2 bg-black text-gray-200 py-1.5 px-4 text-sm md:text-base rounded-lg shadow-[0_0_10px_#FFD700] add-to-cart animate__animated animate__pulse custom-duration">
+          تسوق الآن
+        </a>
+        <div class="p-2 text-center">
+          <h3 class="text-lg text-gray-200" style="font-family: 'Cairo', sans-serif">عطر ميس ديور</h3>
+          <div class="flex justify-center mt-1 text-yellow-400 space-x-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden cursor-pointer group relative">
+        <img src="../../assets/imgs/img7.jpg" alt="عطر 4" class="w-full h-52 object-cover rounded-2xl">
+        <a href="../../assets/pages/allperfoum.html"
+          class="absolute top-2 left-2 bg-black text-gray-200 py-1.5 px-4 text-sm md:text-base rounded-lg shadow-[0_0_10px_#FFD700] add-to-cart animate__animated animate__pulse custom-duration">
+          تسوق الآن
+        </a>
+        <div class="p-2 text-center">
+          <h3 class="text-lg text-gray-200" style="font-family: 'Cairo', sans-serif">عطر هاني مون</h3>
+          <div class="flex justify-center mt-1 text-yellow-400 space-x-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--End best seller area-->
+
+
+  <!--start Latest Collection area-->
+  <section id="gallery" class="max-w-7xl mx-auto my-8 px-4 sm:px-6 lg:px-8 ">
+    <div class="text-center mb-6">
+      <h2 class="text-3xl text-[#FFD700] text-shadow-sm pb-2" style="font-family:'Aref Ruqaa', serif">
+        أحدث الإصدارات
+      </h2>
+      <p class="text-lg text-gray-200 mt-2" style="font-family: 'Cairo', sans-serif">
+        مجموعة مميزة تضم أحدث العطور الرجالية والنسائية
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="rounded-2xl overflow-hidden">
+        <img src="../../assets/imgs/rose.jpg" class="w-full h-52 object-cover card-img" alt="عطر روز">
+        <div class="p-4 text-center">
+          <h3 class="text-[#FFD700] text-lg" style="font-family: 'Cairo', sans-serif">عطر روز</h3>
+          <p class="text-gray-200 text-sm text-shadow-md" style="font-family: 'Cairo', sans-serif">إشراقة تنبض بالحيويه
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden">
+        <img src="../../assets/imgs/woolf.jpg" class="w-full h-52 object-cover card-img" alt="عطر كول واتر">
+        <div class="p-4 text-center">
+          <h3 class="text-[#FFD700] text-lg" style="font-family: 'Cairo', sans-serif">عطر كول واتر</h3>
+          <p class="text-gray-200 text-sm text-shadow-md" style="font-family: 'Cairo', sans-serif">عطر يروي حكاية الصيف
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden">
+        <img src="../../assets/imgs/eva.jpg" class="w-full h-52 object-cover card-img" alt="عطر جوتشي بلوم">
+        <div class="p-4 text-center">
+          <h3 class="text-[#FFD700] text-lg" style="font-family: 'Cairo', sans-serif">عطر جوتشي بلوم</h3>
+          <p class="text-gray-200 text-sm text-shadow-md" style="font-family: 'Cairo', sans-serif">هدوء يلفت..وثقة لا
+            تقال</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden">
+        <img src="../../assets/imgs/laura.jpg" class="w-full h-52 object-cover card-img" alt="عطر برايم">
+        <div class="p-4 text-center">
+          <h3 class="text-[#FFD700] text-lg" style="font-family: 'Cairo', sans-serif">عطر برايم</h3>
+          <p class="text-gray-200 text-sm text-shadow-md" style="font-family: 'Cairo', sans-serif">نقاء يهمس لك</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-6 text-center">
+      <a href="../../assets/pages/allperfoum.html"
+        class="bg-black text-gray-200 py-1.5 px-4 text-sm md:text-base rounded-lg shadow-[0_0_10px_#FFD700] add-to-cart ">
+        إكتشفها الآن
+      </a>
+    </div>
+  </section>
+  <!--End Latest Collection area-->
+
+
+  <!--Start Testimonials area-->
+  <section class="py-6 px-4 text-white text-center ">
+    <h2 class="text-3xl  text-[#FFD700]  text-shadow-sm " style="font-family:'Aref Ruqaa', serif">آراء عملاؤنا</h2>
+    <div class="flex flex-col items-center justify-center mb-8 mt-2 ">
+      <div class="h-0.5 w-2/3 bg-gradient-to-r from-transparent via-yellow-300 to-transparent rounded-full"></div>
+    </div>
+    <div id="testimonial" class="max-w-md mx-auto p-6  rounded-2xl shadow-lg">
+
+      <!-- client 1 -->
+      <div class="slide block">
+        <img src="../../assets/imgs/client4.jpg"
+          class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-yellow-400 object-cover">
+        <p class="text-lg italic text-gray-200 mb-3" style="font-family: 'Cairo', sans-serif">تجربة رائعة! عطور مميزة
+          برائحتها الفاخرة وثباتها الطويل، أشعر بالثقة والجاذبية طوال اليوم </p>
+        <h3 class="text-md  text-[#FFD700]" style="font-family: 'Cairo', sans-serif"> عمر خالد</h3>
+      </div>
+
+      <!-- client 2 -->
+      <div class="slide hidden">
+        <img src="../../assets/imgs/client1.jpg"
+          class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-yellow-400 object-cover">
+        <p class="text-lg mb-3 italic text-gray-200" style="font-family: 'Cairo', sans-serif">العطر فخم جدًا وثابت طول
+          اليوم </p>
+        <h3 class="text-md text-[#FFD700]" style="font-family: 'Cairo', sans-serif"> ليلى أحمد </h3>
+      </div>
+
+      <!-- client 3 -->
+      <div class="slide hidden">
+        <img src="../../assets/imgs/client5.jpg"
+          class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-yellow-400 object-cover">
+        <p class="text-lg mb-3  italic text-gray-200" style="font-family: 'Cairo', sans-serif">جودة عطور مبهرة ورائحة
+          تدوم</p>
+        <h3 class="text-md text-[#FFD700] " style="font-family: 'Cairo', sans-serif">سلمى محمد </h3>
+      </div>
+
+      <!-- client 4 -->
+      <div class="slide hidden">
+        <img src="../../assets/imgs/client6.jpg"
+          class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-yellow-400 object-cover">
+        <p class=" text-gray-200 italic text-lg mb-3" style="font-family: 'Cairo', sans-serif">أشعر بالفخامة مع كل طلبية
+        </p>
+        <h3 class="text-md text-[#FFD700]" style="font-family: 'Cairo', sans-serif">نورا علي</h3>
+      </div>
+    </div>
+  </section>
+  <!--End Testimonials area-->
+
+  <!--Start footer area-->
+  <footer class="relative w-full text-white flex flex-col justify-between mt-8">
+    <div class="flex flex-col items-center justify-center mb-8 mt-8 space-y-3">
+      <div class="h-0.5 w-2/3 bg-gradient-to-r from-transparent via-yellow-300 to-transparent rounded-full"></div>
+    </div>
+    <div
+      class="relative z-10 grid grid-cols-1 md:grid-cols-3 justify-items-center items-center flex-grow gap-6 px-6 text-center py-10">
+
+      <!--contact us-->
+      <div>
+        <h2 class="text-2xl  text-[#FFD700] mb-4" style="font-family:'Aref Ruqaa', serif">تواصل معنا</h2>
+        <p class="mb-2" style="font-family: 'Cairo', sans-serif"> القاهرة، شارع مصطفى النحاس <i
+            class="fa-solid fa-location-dot"></i></p>
+        <p class="mb-2" style="font-family: 'Cairo', sans-serif"> +201141775522 <i class="fa-solid fa-phone-volume"></i>
+        </p>
+        <p class="mb-2" style="font-family: 'Cairo', sans-serif">Abeeralkhloud@gmail.com <i
+            class="fa-solid fa-envelope"></i></p>
+      </div>
+
+      <!--Quick links   -->
+      <div>
+        <h2 class="text-2xl   text-[#FFD700] mb-4" style="font-family:'Aref Ruqaa', serif">روابط سريعة</h2>
+        <ul>
+          <li class="mb-2 text-gray-200 footer-links "><a href="../../assets/pages/perfourm.html"
+              style="font-family: 'Cairo', sans-serif">الرئيسية</a></li>
+          <li class="mb-2 text-gray-200 footer-links "><a href="../../assets/pages/allperfoum.html"
+              style="font-family: 'Cairo', sans-serif">العطور</a></li>
+          <li class="mb-2 text-gray-200 footer-links"><a href="../../index.html"
+              style="font-family: 'Cairo', sans-serif">دليل العطور الذكي</a></li>
+          <li class="mb-2 text-gray-200 footer-links"><a href="../../assets/pages/payment.html"
+              style="font-family: 'Cairo', sans-serif">بوابة الدفع</a></li>
+        </ul>
+      </div>
+
+      <!--social media   -->
+      <div>
+        <h2 class="text-2xl text-[#FFD700] mb-4" style="font-family:'Aref Ruqaa', serif">تابعنا</h2>
+        <div class="flex justify-center gap-4 text-2xl">
+          <a href="#" class="text-gray-200 transition transform hover:scale-105"><i
+              class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="text-gray-200 transition transform hover:scale-105"><i
+              class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="text-gray-200 transition transform hover:scale-105"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="text-gray-200 transition transform hover:scale-105"><i
+              class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!--copy right   -->
+     <div class="relative z-10 w-full text-center py-4 text-[#FFD700] text-xl flex flex-col items-center space-y-2" style="font-family:'Aref Ruqaa', serif">
+  <div>© 2025 جميع الحقوق محفوظة عبير الخلود</div>
+  <div class="text-sm text-gray-200">Made by Gufran</div>
+</div>
+  </footer><!--End footer section-->
+
+  <!--script-->
+  <script src="../../assets/js/main.js"></script>
+</script>
+</body>
+</html>

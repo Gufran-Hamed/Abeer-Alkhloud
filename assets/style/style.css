@@ -1,0 +1,71 @@
+/* cart style */
+.icon-cart {
+  transition: transform 0.3s ease; 
+}
+
+.fa-shopping-cart:hover{
+  transform: scale(1.5); 
+ 
+}
+/* Start Button */
+ .start-btn,.next-btn:hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ cursor:pointer;
+}
+
+.start-btn:hover,.next-btn:hover {
+  transform: scale(1.1);
+    background-color:floralwhite;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
+}
+.img-area:hover{
+transform: scale(1.1);
+
+}
+.special-btn:hover{
+  background-color:floralwhite;
+   transform: scale(1.1);
+}
+/* End Start Button style */
+
+
+/* button style*/
+.add-to-cart:hover{
+  box-shadow: 0 0 20px #FFD700;
+}
+.add-to-cart{
+  cursor: pointer;
+}
+
+.services-area:hover{
+  transform: scale(1.1);
+}
+
+/* nav style */
+.nav-link:hover{
+  transform: scale(1.05);
+  color:#FFD700 ;
+}
+/* latest collection style */
+.card-img:hover{
+   transform: scale(1.05);
+}
+/* style footer links */
+.footer-links {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links:hover {
+  transform: scale(1.1);
+  color:#FFD700;
+}
+
+.custom-duration {
+  --animate-duration: 3s;
+  animation-iteration-count: 5; 
+}
+
+
+
+
+

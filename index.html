@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Twilind-->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="assets/style/style.css">
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@200..1000&display=swap"
+    rel="stylesheet">
+  <!--Title-->
+  <title>دليل العطور الذكي</title>
+  <link rel="icon" href="assets/imgs/logo3.png" type="image/png">
+
+</head>
+
+<body id="page" class="bg-[url('assets/imgs/logo3.png')] bg-cover bg-center text-white transition-all duration-700">
+  <div class="flex justify-center items-center min-h-screen bg-black/20 px-4 sm:px-6">
+    <div id="quiz-container" class="bg-black/70 p-6 sm:p-8 rounded-2xl max-w-full sm:max-w-xl text-center text-white">
+
+      <!--Start button -->
+      <div id="start-screen">
+        <h2 class="text-xl sm:text-2xl mb-4 cursor-pointer " style="font-family: 'Cairo', sans-serif">
+          عايز تعيش أي إحساس مع عطرك؟
+        </h2>
+        <button onclick="showStep1()"
+          class="mt-4 px-4 sm:px-6 py-2 sm:py-3 bg-[#FFD700] text-black rounded-lg shadow-md start-btn"
+          style="font-family: 'Cairo', sans-serif">
+          اختر إحساس عطرك
+        </button>
+      </div>
+
+      <!--perfume area  -->
+      <div id="step1" class="hidden flex flex-col items-center">
+        <h2 class="text-lg sm:text-xl mb-6" style="font-family: 'Cairo', sans-serif">ماهي الروائح التي تلامس ذوقك؟</h2>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-5">
+          <div onclick="selectScent(this,'زهور','assets/imgs/img7.jpg')" class="cursor-pointer text-center">
+            <div class="w-28 sm:w-36 h-28 sm:h-36 rounded-xl overflow-hidden border-4 border-transparent ">
+              <img src="assets/imgs/img7.jpg" alt="زهور" class="w-full h-full object-cover img-area">
+            </div>
+            <p class="mt-2 text-xl sm:text-2xl" style="font-family:'Aref Ruqaa', serif">زهور</p>
+          </div>
+          <div onclick="selectScent(this,'فواكه','assets/imgs/img-1.jpg')" class="cursor-pointer text-center">
+            <div class="w-28 sm:w-36 h-28 sm:h-36 rounded-xl overflow-hidden border-4 border-transparent ">
+              <img src="assets/imgs/img-1.jpg" alt="فواكه" class="w-full h-full object-cover img-area">
+            </div>
+            <p class="mt-2 text-xl sm:text-2xl  " style="font-family:'Aref Ruqaa', serif">فواكه</p>
+          </div>
+          <div onclick="selectScent(this,'فانيليا','assets/imgs/photo2.jpg')" class="cursor-pointer text-center">
+            <div class="w-28 sm:w-36 h-28 sm:h-36 rounded-xl overflow-hidden border-4 border-transparent">
+              <img src="assets/imgs/photo2.jpg" alt="فانيليا" class="w-full h-full object-cover img-area">
+            </div>
+            <p class="mt-2 text-xl sm:text-2xl " style="font-family:'Aref Ruqaa', serif">فانيليا</p>
+          </div>
+          <div onclick="selectScent(this,'مائي','assets/imgs/photo3.jpg')" class="cursor-pointer text-center">
+            <div class="w-28 sm:w-36 h-28 sm:h-36 rounded-xl overflow-hidden border-4 border-transparent">
+              <img src="assets/imgs/photo3.jpg" alt="مائي" class="w-full h-full object-cover img-area">
+            </div>
+            <p class="mt-2 text-xl sm:text-2xl " style="font-family:'Aref Ruqaa', serif">فراولة</p>
+          </div>
+          <div onclick="selectScent(this,'مسك','assets/imgs/img-2.jpg')" class="cursor-pointer text-center">
+            <div class="w-28 sm:w-36 h-28 sm:h-36 rounded-xl overflow-hidden border-4 border-transparent ">
+              <img src="assets/imgs/img-2.jpg" alt="مسك" class="w-full h-full object-cover img-area">
+            </div>
+            <p class="mt-2 text-xl sm:text-2xl " style="font-family:'Aref Ruqaa', serif">مسك</p>
+          </div>
+          <div onclick="selectScent(this,'فاخر','assets/imgs/img-5.jpg')" class="cursor-pointer text-center">
+            <div class="w-28 sm:w-36 h-28 sm:h-36 rounded-xl overflow-hidden border-4 border-transparent">
+              <img src="assets/imgs/img-5.jpg" alt="فاخر" class="w-full h-full object-cover img-area">
+            </div>
+            <p class="mt-2 text-xl sm:text-2xl " style="font-family:'Aref Ruqaa', serif">عود</p>
+          </div>
+        </div>
+        <button onclick="showStep2()"
+          class="mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 bg-[#FFD700] rounded-lg next-btn text-black"
+          style="font-family: 'Cairo', sans-serif">
+          اكتشف المزيد
+        </button>
+      </div>
+
+      <!--Time of use  -->
+      <div id="step2" class="hidden flex flex-col items-center w-full">
+        <h2 class="text-lg sm:text-xl mb-6" style="font-family: 'Cairo', sans-serif">متى تحب تستخدم عطرك؟</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 w-full px-2 sm:px-0">
+
+          <!-- day -->
+          <div onclick="finishQuiz('نهار')"
+            class="cursor-pointer p-4 sm:p-6 text-yellow-300 rounded-lg shadow-md special-btn">
+            <h3 class="text-xl sm:text-2xl mb-2" style="font-family:'Aref Ruqaa', serif">نهار</h3>
+          </div>
+
+          <!-- night -->
+          <div onclick="finishQuiz('ليل')"
+            class="cursor-pointer p-4 sm:p-6 text-purple-300 rounded-lg shadow-md special-btn">
+            <h3 class="text-xl sm:text-2xl mb-2" style="font-family:'Aref Ruqaa', serif">ليل</h3>
+          </div>
+
+          <!-- Special  -->
+          <div onclick="finishQuiz('مناسبات خاصة')"
+            class="cursor-pointer p-4 sm:p-6 text-pink-500 rounded-lg shadow-md special-btn">
+            <h3 class="text-xl sm:text-2xl mb-2" style="font-family:'Aref Ruqaa', serif">مناسبات خاصة</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--End Time of use area-->
+
+  <!--Script-->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
